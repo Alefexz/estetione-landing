@@ -4,43 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo! | EstetiOne</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Confetti Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { esteti: { bg: '#0B0B0F', purple: '#7A4FFF', cyan: '#00D4FF' } },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+                    animation: { 'bounce-slow': 'bounce 3s infinite' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0B0B0F; color: white; overflow: hidden; }
+        .glass-panel {
+            background: rgba(21, 21, 26, 0.7);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 50px rgba(122, 79, 255, 0.15);
+        }
+    </style>
 </head>
-<body class="h-screen flex flex-col items-center justify-center bg-[#0B0B0F] text-white text-center px-6">
-    
-    <div class="w-20 h-20 bg-[#7A4FFF]/20 rounded-full flex items-center justify-center mb-6 text-[#7A4FFF]">
-        <i data-lucide="check-circle" class="w-10 h-10"></i>
+<body class="h-screen flex flex-col items-center justify-center p-4 relative">
+
+    <!-- Background Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-esteti-purple/10 rounded-full blur-[100px]"></div>
+
+    <div class="glass-panel max-w-lg w-full p-10 rounded-3xl text-center relative z-10">
+        
+        <div class="w-24 h-24 bg-gradient-to-br from-esteti-purple to-esteti-cyan rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-esteti-purple/30 animate-bounce-slow">
+            <i data-lucide="check" class="w-12 h-12 text-white"></i>
+        </div>
+
+        <h1 class="text-3xl font-bold font-display mb-3">Cadastro Realizado!</h1>
+        <p class="text-gray-400 mb-8 text-lg">
+            Bem-vindo à revolução da gestão estética.
+        </p>
+
+        <div class="bg-white/5 rounded-xl p-6 text-left space-y-4 border border-white/5 mb-8">
+            <div class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-esteti-cyan/20 text-esteti-cyan flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</div>
+                <div>
+                    <h4 class="font-bold text-sm text-white">Conta Criada</h4>
+                    <p class="text-xs text-gray-500">Seus dados já estão seguros no nosso sistema.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-esteti-purple/20 text-esteti-purple flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</div>
+                <div>
+                    <h4 class="font-bold text-sm text-white">Aguardando Ativação</h4>
+                    <p class="text-xs text-gray-500">Estamos preparando seu painel exclusivo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-3">
+            <!-- Botão WhatsApp -->
+            <a href="https://wa.me/55SEUNUMERO?text=Oi,%20acabei%20de%20criar%20minha%20conta%20no%20EstetiOne!" 
+               class="block w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2">
+               <i data-lucide="message-circle" class="w-5 h-5"></i>
+               Acelerar Liberação no WhatsApp
+            </a>
+
+            <!-- Botão Voltar -->
+            <a href="index.html" class="block w-full bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white font-medium py-3.5 rounded-xl transition-all">
+                Voltar para o Início
+            </a>
+        </div>
     </div>
 
-    <h1 class="text-4xl font-bold mb-4">Bem-vindo à EstetiOne!</h1>
-    <p class="text-gray-400 max-w-lg mb-8 text-lg">
-        Sua conta foi criada com sucesso. Estamos preparando seu ambiente profissional.
-    </p>
+    <script>
+        lucide.createIcons();
+        
+        // Dispara confetes ao carregar
+        window.onload = () => {
+            const duration = 3 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-    <div class="bg-white/5 p-6 rounded-xl border border-white/10 max-w-md w-full text-left space-y-4 mb-8">
-        <div class="flex items-center gap-4">
-            <div class="w-8 h-8 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center">1</div>
-            <p class="text-sm">Cadastro realizado com sucesso.</p>
-        </div>
-        <div class="flex items-center gap-4">
-            <div class="w-8 h-8 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center">2</div>
-            <p class="text-sm">Aguardando liberação do sistema.</p>
-        </div>
-        <div class="flex items-center gap-4 opacity-50">
-            <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">3</div>
-            <p class="text-sm">Configuração da agenda.</p>
-        </div>
-    </div>
+            function randomInOut(min, max) { return Math.random() * (max - min) + min; }
 
-    <a href="https://wa.me/SEUNUMERO?text=Criei%20minha%20conta%20no%20EstetiOne%20e%20quero%20começar!" 
-       class="bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2 transition-all">
-       <i data-lucide="message-circle" class="w-5 h-5"></i>
-       Falar com Suporte para Liberar Acesso
-    </a>
-    
-    <p class="mt-8 text-sm text-gray-600">Você receberá um e-mail com os próximos passos.</p>
-
-    <script>lucide.createIcons();</script>
+            const interval = setInterval(function() {
+                const timeLeft = animationEnd - Date.now();
+                if (timeLeft <= 0) return clearInterval(interval);
+                const particleCount = 50 * (timeLeft / duration);
+                
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#7A4FFF', '#00D4FF'] }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#7A4FFF', '#00D4FF'] }));
+            }, 250);
+        };
+    </script>
 </body>
 </html>

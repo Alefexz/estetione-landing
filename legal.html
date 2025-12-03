@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos e Privacidade | EstetiOne</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Estilos Base (Funciona mesmo sem internet) */
+        body {
+            background-color: #0B0B0F;
+            color: #E0E0E0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Botão Voltar */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #00D4FF;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: opacity 0.3s;
+        }
+        .back-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Cabeçalho */
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 20px;
+        }
+
+        /* Seções */
+        .section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            color: white;
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon-purple {
+            color: #7A4FFF;
+        }
+
+        p {
+            color: #A0A0A0;
+            margin: 0;
+        }
+
+        /* Rodapé */
+        .footer-legal {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Link de Voltar -->
+        <a href="index.html" class="back-link">
+            <i data-lucide="arrow-left" style="width: 20px;"></i> Voltar para o site
+        </a>
+
+        <h1>Termos de Uso e Privacidade</h1>
+        
+        <div class="section">
+            <h2><i data-lucide="file-text" class="icon-purple"></i> 1. Visão Geral</h2>
+            <p>O EstetiOne é uma plataforma SaaS (Software as a Service) destinada à gestão de negócios de beleza e estética. Ao utilizar nossa plataforma para agendamentos ou gestão, você concorda automaticamente com estes termos.</p>
+        </div>
+
+        <div class="section">
+            <h2><i data-lucide="shield" class="icon-purple"></i> 2. Dados e Privacidade</h2>
+            <p>Levamos a LGPD a sério. Seus dados cadastrais (nome, e-mail, telefone) são utilizados estritamente para o funcionamento da plataforma e comunicação sobre sua conta. Não vendemos, alugamos ou compartilhamos seus dados com terceiros para fins publicitários.</p>
+        </div>
+
+        <div class="section">
+            <h2><i data-lucide="credit-card" class="icon-purple"></i> 3. Pagamentos e Assinatura</h2>
+            <p>O serviço é oferecido via assinatura mensal. Você tem total liberdade para cancelar a qualquer momento diretamente pelo seu painel ou solicitando ao suporte. Não realizamos reembolso de períodos parciais já utilizados.</p>
+        </section>
+
+        <div class="section">
+            <h2><i data-lucide="alert-circle" class="icon-purple"></i> 4. Isenção de Responsabilidade</h2>
+            <p>O EstetiOne fornece a ferramenta tecnológica de gestão. Não nos responsabilizamos pelos serviços estéticos prestados pelos profissionais, nem por eventuais cancelamentos ou disputas entre o profissional e seu cliente final.</p>
+        </div>
+        
+       <div class="footer-legal">
+            <p>Última atualização: Dezembro de 2025.</p>
+            <p>Dúvidas? Entre em contato: 
+                <a href="mailto:suporte.estetione@gmail.com" style="color: #00D4FF; text-decoration: none; font-weight: bold;">
+                    suporte.estetione@gmail.com
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Script para ativar os ícones -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
