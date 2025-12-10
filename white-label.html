@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Próprio para Profissionais de Beleza | EstetiOne White-label</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        .header { background: linear-gradient(135deg, #EC4899 0%, #7C3AED 100%); color: white; padding: 20px 0; }
+        .logo { font-size: 24px; font-weight: bold; display: flex; align-items: center; }
+        .logo span { margin-left: 10px; }
+        
+        /* Hero */
+        .hero { padding: 100px 0; text-align: center; color: white; background: linear-gradient(135deg, #EC4899 0%, #7C3AED 100%); }
+        .hero h1 { font-size: 52px; margin-bottom: 20px; }
+        .hero p { font-size: 22px; margin-bottom: 30px; opacity: 0.9; }
+        .btn { display: inline-block; background: white; color: #EC4899; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 20px; margin: 10px; }
+        .btn-secondary { background: transparent; border: 2px solid white; color: white; }
+        
+        /* App Showcase */
+        .showcase { padding: 80px 0; background: #F9FAFB; }
+        .showcase-content { display: flex; align-items: center; gap: 60px; }
+        .app-preview { flex: 1; text-align: center; }
+        .phone-mockup { width: 300px; margin: 0 auto; position: relative; }
+        .phone-screen { width: 100%; border-radius: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+        .app-details { flex: 1; }
+        .app-details h2 { font-size: 36px; margin-bottom: 20px; color: #333; }
+        
+        /* Benefits */
+        .benefits { padding: 80px 0; }
+        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .benefit-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
+        .benefit-icon { font-size: 60px; margin-bottom: 20px; }
+        .benefit-card h3 { font-size: 24px; margin-bottom: 15px; color: #333; }
+        
+        /* Pricing */
+        .pricing { padding: 80px 0; background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%); color: white; text-align: center; }
+        .pricing-card { background: white; color: #333; padding: 50px; border-radius: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .price-tag { font-size: 72px; font-weight: bold; margin: 20px 0; }
+        .price-tag small { font-size: 24px; }
+        
+        /* Process */
+        .process { padding: 80px 0; }
+        .process-steps { display: flex; justify-content: space-between; margin-top: 50px; }
+        .step { text-align: center; flex: 1; position: relative; }
+        .step-number { width: 60px; height: 60px; background: #7C3AED; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; margin: 0 auto 20px; }
+        
+        /* CTA */
+        .cta { padding: 80px 0; text-align: center; }
+        
+        /* Footer */
+        .footer { background: #1F2937; color: white; padding: 40px 0; text-align: center; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">📱 <span>EstetiOne White-label</span></div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Seu App Próprio na Play Store</h1>
+            <p>Ofereça um app com SUA MARCA para seus clientes baixarem. Pareça uma rede de salões.</p>
+            <a href="#contact" class="btn">Quero Meu App por R$1.000</a>
+            <a href="index.html" class="btn btn-secondary">Conhecer Sistema Online</a>
+        </div>
+    </section>
+
+    <!-- App Showcase -->
+    <section class="showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <div class="app-preview">
+                    <div class="phone-mockup">
+                        <!-- Imagem de um app fictício -->
+                        <div style="background: white; border-radius: 40px; padding: 20px; text-align: center;">
+                            <div style="background: linear-gradient(135deg, #FF6B8B, #FFA726); padding: 40px 20px; border-radius: 20px; color: white; margin-bottom: 20px;">
+                                <div style="font-size: 40px;">💅</div>
+                                <h3 style="margin: 10px 0;">Ana Beleza</h3>
+                                <p>Agende com a Ana</p>
+                            </div>
+                            <div style="padding: 20px;">
+                                <div style="background: #F3F4F6; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                                    <strong>Manicure Completa</strong>
+                                    <div style="color: #7C3AED; font-weight: bold;">R$ 45</div>
+                                </div>
+                                <div style="background: #F3F4F6; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                                    <strong>Pedicure</strong>
+                                    <div style="color: #7C3AED; font-weight: bold;">R$ 50</div>
+                                </div>
+                                <button style="background: #7C3AED; color: white; border: none; padding: 15px; width: 100%; border-radius: 10px; font-weight: bold; margin-top: 20px;">
+                                    📅 Agendar Horário
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-details">
+                    <h2>Seu App, Sua Marca</h2>
+                    <p style="font-size: 18px; line-height: 1.6; color: #666; margin-bottom: 30px;">
+                        Imagine seus clientes procurando "Ana Beleza" na Play Store e encontrando 
+                        <strong>SEU APP</strong> com sua logo, suas cores e seus serviços.
+                    </p>
+                    <ul style="list-style: none; font-size: 18px;">
+                        <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                            <span style="background: #10B981; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">✓</span>
+                            Logo e cores personalizadas
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                            <span style="background: #10B981; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">✓</span>
+                            Publicação na Play Store
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                            <span style="background: #10B981; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">✓</span>
+                            Notificações push personalizadas
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                            <span style="background: #10B981; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">✓</span>
+                            Atualizações automáticas
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 50px; color: #333;">Por que ter seu próprio app?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">👑</div>
+                    <h3>Profissionalismo Máximo</h3>
+                    <p>Clientes veem você como uma empresa estabelecida, não como um profissional autônomo.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Fidelização 3x Maior</h3>
+                    <p>Clientes com seu app instalado voltam 3x mais que clientes de WhatsApp.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Diferencial Competitivo</h3>
+                    <p>Poucos profissionais têm app próprio. Destaque-se da concorrência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="contact">
+        <div class="container">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Investimento</h2>
+            <p style="font-size: 20px; margin-bottom: 40px; opacity: 0.9;">Um investimento que se paga em 2 meses</p>
+            
+            <div class="pricing-card">
+                <h3 style="color: #7C3AED; font-size: 32px; margin-bottom: 20px;">Pacote White-label Completo</h3>
+                
+                <div class="price-tag" style="color: #EC4899;">
+                    R$ 1.000<small style="color: #666; font-size: 24px;"> + R$ 149/mês</small>
+                </div>
+                
+                <div style="text-align: left; margin: 40px 0;">
+                    <h4 style="color: #333; margin-bottom: 15px;">O que você recebe:</h4>
+                    <ul style="list-style: none; color: #666; font-size: 18px;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #EEE;">✅ App personalizado com SUA logo</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #EEE;">✅ Publicação na Play Store (Android)</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #EEE;">✅ Configuração completa do sistema</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #EEE;">✅ Treinamento de 1 hora</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #EEE;">✅ Suporte técnico por 30 dias</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #EEE;">✅ Atualizações mensais gratuitas</li>
+                        <li style="padding: 10px 0;">✅ Hospedagem e manutenção incluídas</li>
+                    </ul>
+                </div>
+                
+                <a href="cadastro.html?plano=white-label" class="btn" style="background: #EC4899; color: white; font-size: 22px; padding: 20px 50px;">Quero Meu App Agora</a>
+                
+                <p style="margin-top: 30px; color: #666; font-size: 14px;">
+                    ⏱️ Entrega em 7 dias úteis • 💰 50% na assinatura, 50% na entrega
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px; color: #333;">Como funciona</h2>
+            <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 50px;">Do pedido ao app na loja em 7 dias</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Você Assina</h3>
+                    <p style="color: #666; margin-top: 10px;">Contrato + 50% do setup</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Personalizamos</h3>
+                    <p style="color: #666; margin-top: 10px;">Logo, cores, textos</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Configuramos</h3>
+                    <p style="color: #666; margin-top: 10px;">Serviços, preços, agenda</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Entregamos</h3>
+                    <p style="color: #666; margin-top: 10px;">App + Play Store</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2 style="font-size: 36px; margin-bottom: 20px; color: #333;">Pare de ser apenas um número no WhatsApp</h2>
+            <p style="font-size: 20px; color: #666; margin-bottom: 40px;">Torne-se uma marca com presença digital profissional.</p>
+            <a href="cadastro.html?plano=white-label" class="btn" style="background: linear-gradient(135deg, #EC4899, #7C3AED); color: white; font-size: 22px;">Solicitar Orçamento</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 EstetiOne White-label. Todos os direitos reservados.</p>
+            <p><a href="legal.html" style="color: #8B5CF6; text-decoration: none;">Termos de Uso</a> | 
+               <a href="saas.html" style="color: #8B5CF6; text-decoration: none;">Conhecer Sistema Online</a></p>
+        </div>
+    </footer>
+</body>
+</html>
